@@ -1,24 +1,38 @@
-# 🔁 Types of Recursion: Head Recursion in Python
+# 🔁 Recursion:nested Recursion in Python
 
 ## 🎯 AIM:
-To write a Python program to demonstrate **Head Recursion** by finding and printing the sequence based on the sum of all digits (even or odd adjusted input).
+To write a Python program to display all the positive numbers in reverse order with a difference 2 from 'N'  using nested recursion
+
+---
 
 ## 🧠 ALGORITHM:
 
-1. **Start**
-2. Define a recursive function `fun(n)`
-3. In the function:
-   - Create a recursive call at the **beginning** (Head Recursion)
-   - Print the result after the recursive call
-4. Take input from the user
-5. If input is odd, convert it to the next even number
-6. Call the recursive function
-7. **Stop**
+1. Start the function fun(n).
+2. If n equals 1, return 1.
+3. If n equals 0, return 0.
+4. Otherwise, print the current value of n without moving to the next line.
+5. Call fun(n - 2) and pass its result again into fun().
+6. Output the final returned value from the nested recursive calls.
+---
 
 ## 💻 PROGRAM:
-
-ADD CODE HERE
+~~~
+def fun(n):
+    if n==1:
+        return 1
+    elif n==0:
+        return 0
+    else:
+        print(n,end=" ")
+        return(fun(fun(n-2)))
+        
+n=int(input())
+print(fun(n))
+~~~
 
 ## OUTPUT
+<img width="356" height="166" alt="image" src="https://github.com/user-attachments/assets/ef975f79-7672-4d3f-b99f-2364fdcfeb64" />
+
 
 ## RESULT
+Thus the Nested recursion is verified.
